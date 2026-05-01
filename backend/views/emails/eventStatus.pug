@@ -1,0 +1,29 @@
+extends baseEmail
+
+block content
+  h1.greeting Event #{status === 'approved' ? 'Approved! ✅' : 'Update'}
+  p.text Hi #{firstName}, here is an update about your event:
+
+  .highlight-box
+    p.text(style="margin:0; font-weight:600; font-size:15px;")= eventTitle
+    p.text(style="margin:6px 0 0; font-size:13.5px;")
+      | Status: &nbsp;
+      span(style=`color: ${status === 'approved' ? '#0f5132' : '#c0392b'}; font-weight:600;`)= status.toUpperCase()
+
+  if status === 'approved'
+    p.text Congratulations! Your event is now live on EventFlow and attendees can start booking.
+    .btn-wrap
+      a.btn(href=eventUrl) View Event
+
+  if status === 'rejected'
+    p.text Unfortunately your event did not meet our guidelines. Please review our policies and resubmit.
+    if reason
+      .highlight-box
+        p.text(style="margin:0; font-size:13.5px;")
+          strong Reason: &nbsp;
+          | #{reason}
+
+  hr.divider
+  p.note
+    | Questions? &nbsp;
+    a(href="mailto:support@eventflow.com") Contact support

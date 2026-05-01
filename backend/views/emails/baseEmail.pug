@@ -1,0 +1,176 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    title= subject
+    style.
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f5f4f0;
+        color: #1a1a18;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrapper {
+        background-color: #f5f4f0;
+        padding: 40px 20px;
+      }
+      .container {
+        max-width: 560px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      }
+      .header {
+        background: linear-gradient(135deg, #0f5132 0%, #0a3d25 100%);
+        padding: 28px 36px;
+        text-align: center;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        background: rgba(255,255,255,0.15);
+        border-radius: 9px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        color: #ffffff;
+        vertical-align: middle;
+        line-height: 34px;
+        text-align: center;
+      }
+      .brand-name {
+        font-size: 17px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+        vertical-align: middle;
+      }
+      .body {
+        padding: 36px 36px 28px;
+      }
+      .greeting {
+        font-size: 22px;
+        font-weight: 700;
+        color: #1a1a18;
+        margin-bottom: 12px;
+        letter-spacing: -0.02em;
+      }
+      .text {
+        font-size: 15px;
+        color: #4a4a46;
+        margin-bottom: 20px;
+        line-height: 1.65;
+      }
+      .btn-wrap {
+        text-align: center;
+        margin: 28px 0;
+      }
+      .btn {
+        display: inline-block;
+        padding: 13px 28px;
+        background: linear-gradient(135deg, #0f5132, #0a3d25);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .divider {
+        border: none;
+        border-top: 1px solid #ede9e3;
+        margin: 24px 0;
+      }
+      .note {
+        font-size: 13px;
+        color: #888884;
+        line-height: 1.6;
+      }
+      .note a { color: #0f5132; }
+      .footer {
+        background: #f9f8f5;
+        border-top: 1px solid #ede9e3;
+        padding: 20px 36px;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 12.5px;
+        color: #aaa;
+        line-height: 1.6;
+      }
+      .footer a { color: #0f5132; text-decoration: none; }
+      .otp-box {
+        background: #f0f7f2;
+        border: 2px dashed #0f5132;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        margin: 24px 0;
+      }
+      .otp-code {
+        font-size: 38px;
+        font-weight: 800;
+        color: #0f5132;
+        letter-spacing: 10px;
+        font-variant-numeric: tabular-nums;
+      }
+      .otp-label {
+        font-size: 12.5px;
+        color: #888;
+        margin-top: 6px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .highlight-box {
+        background: #f9f8f5;
+        border-left: 3px solid #0f5132;
+        border-radius: 0 8px 8px 0;
+        padding: 14px 16px;
+        margin: 16px 0;
+      }
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 8px 0;
+      }
+      .tag {
+        display: inline-block;
+        padding: 3px 10px;
+        background: rgba(15,81,50,0.08);
+        color: #0f5132;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+  body
+    .wrapper
+      .container
+        .header
+          span.brand-mark EF
+          =' '
+          span.brand-name EventFlow
+
+        .body
+          block content
+
+        .footer
+          p
+            | © #{new Date().getFullYear()} EventFlow. All rights reserved.
+            br
+            | Questions? &nbsp;
+            a(href="mailto:support@eventflow.com") support@eventflow.com

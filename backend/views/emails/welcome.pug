@@ -1,0 +1,22 @@
+extends baseEmail
+
+block content
+  h1.greeting Welcome, #{firstName}! 🎉
+  p.text Your EventFlow account has been created successfully. You're all set to discover and book amazing events.
+
+  .highlight-box
+    p.text(style="margin:0; font-size:14px;")
+      strong Account: &nbsp;
+      | #{email}
+    p.text(style="margin:6px 0 0; font-size:14px;")
+      strong Role: &nbsp;
+      | #{role === 'organizer' ? 'Event Organiser' : 'Event Attendee'}
+
+  .btn-wrap
+    a.btn(href=browseUrl) Browse Events
+
+  hr.divider
+  p.note
+    | If you didn't create this account, please
+    a(href="mailto:support@eventflow.com")  contact us
+    |  immediately.

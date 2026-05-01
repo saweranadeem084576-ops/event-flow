@@ -1,0 +1,26 @@
+extends baseEmail
+
+block content
+  h1.greeting Booking Confirmed!
+  p.text Hi #{firstName}, your booking for the following event has been confirmed.
+
+  .highlight-box
+    p.text(style="margin:0; font-weight:600; font-size:15px;")= eventTitle
+    p.text(style="margin:6px 0 0; font-size:13.5px; color:#666;")
+      | 📅 &nbsp;#{eventDate}
+    p.text(style="margin:4px 0 0; font-size:13.5px; color:#666;")
+      | 📍 &nbsp;#{eventLocation}
+    p.text(style="margin:4px 0 0; font-size:13.5px; color:#0f5132; font-weight:600;")
+      | #{seats} seat#{seats > 1 ? 's' : ''} · #{amount === 0 ? 'Free' : '$' + amount}
+
+  p.text Your ticket(s) are ready. Present them at the venue entrance.
+
+  .btn-wrap
+    a.btn(href=dashboardUrl) View My Tickets
+
+  hr.divider
+  p.note
+    | Booking ID: #{bookingId}
+    br
+    | Need help? &nbsp;
+    a(href="mailto:support@eventflow.com") Contact support

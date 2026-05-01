@@ -1,0 +1,16 @@
+extends baseEmail
+
+block content
+  h1.greeting Hi #{firstName},
+  p.text Your verification code for EventFlow is:
+
+  .otp-box
+    .otp-code= otp
+    .otp-label Expires in 10 minutes
+
+  p.text Enter this 6-digit code on the verification page to complete sign-in. Do not share this code with anyone.
+
+  hr.divider
+  p.note
+    | If you didn't try to sign in to EventFlow, you can safely ignore this email.
+    | Your account remains secure.
